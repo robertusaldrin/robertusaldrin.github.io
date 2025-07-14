@@ -1,0 +1,103 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.theme-light {
+    --base-body-background: #ffffff;
+    --base-body-color: #010101;
+    --base-container-background-1: rgb(142, 229, 225);
+    --base-container-background-2: rgb(74, 186, 181);
+    --base-container-background-3: rgb(45, 136, 131);
+    --base-sun: rgb(74, 186, 181);
+    --base-moon: rgb(51, 33, 72);
+}
+
+.theme-dark {
+    --base-body-background: #010101;
+    --base-body-color: #e3e3e3;
+    --base-container-background-1: rgb(33, 19, 49);
+    --base-container-background-2: rgb(51, 33, 72);
+    --base-container-background-3: rgb(77, 40, 120);
+    --base-sun: rgb(74, 186, 181);
+    --base-moon: rgb(51, 33, 72);
+}
+
+body {
+    background-color: var(--base-body-background);
+    color: var(--base-body-color);
+    transition: background-color 0.4s, color 0.4s;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    display: flex;
+    margin: 0 auto;
+}
+
+.container .sidebar {
+    background-color: var(--base-container-background-2);
+    height: 100vh;
+    position: fixed;
+    width: 220pt;
+}
+
+.container .content {
+    flex: 1;
+    background-color: pink;
+    margin-top: 20pt;
+    margin-bottom: 20pt;
+    margin-left: calc(220pt + 20pt);
+    display: block;
+    width: calc(100% - 220pt);
+}
+
+.sidebar-title {
+    background-color: var(--base-container-background-1);
+}
+
+.sidebar-title span {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar-title hr {
+    width: 75%;
+    margin: 7pt auto;
+}
+
+.sidebar-title-name {
+    padding-top: 20pt;
+}
+
+.sidebar-title-position {
+    padding-bottom: 15pt;
+}
+
+#sidebar-svg rect{
+    fill: var(--base-container-background-2);
+}
+
+#sidebar-svg path{
+    fill: var(--base-container-background-1);
+}
+
+.content-block {
+    background-color: rgb(207, 144, 17);
+    padding: 20pt 20pt;
+}
+
+.content-block h2 {
+    font-weight: bold;
+}
+
+.border-bottom-title {
+    background-color: #000000;
+    height: 2.5pt;
+    margin-bottom: 20pt;
+    width: 50pt;
+}
+
+.footer {
+    text-align: center;
+}

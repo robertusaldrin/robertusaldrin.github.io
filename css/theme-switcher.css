@@ -1,0 +1,47 @@
+.theme-switcher {
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    padding-bottom: 7pt;
+}
+
+.switch {
+    bottom: -4.2pt;
+    position: relative;
+    display: inline-block;
+    width: 40pt;
+    height: 10pt;
+    cursor: pointer;
+    background-color: var(--base-container-background-3);
+    border-radius: 10pt;
+}
+
+/* hide default checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    background-color: var(--base-container-background-1);
+    height: 5pt; width: 10pt; /* slider size */
+    top: 2.5pt; left: 2.5pt; /* slider reset position */
+    border-radius: 10pt;
+    transition: 0.5s;
+}
+
+input:checked + .slider:before {
+    background: var(--base-container-background-1);
+    transform: translateX(25pt);
+}
+
+.sun {
+    color: var(--base-sun);
+}
+
+.moon {
+    color: var(--base-moon);
+}
