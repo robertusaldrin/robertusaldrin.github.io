@@ -19,7 +19,7 @@
         <div class="container">
             <div class="sidebar">
                 <div class="sidebar-title">
-                    <span class="sidebar-title-name">Robertus Aldrin Pangemanan</span>
+                    <span class="sidebar-title-name">Robertus Aldrin</span>
                     <hr>
                     <span class="sidebar-title-position">Web Developer</span>
                     <svg id="sidebar-svg" viewBox="0 0 900 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
@@ -35,30 +35,35 @@
                             <i class="fa fa-address-card"></i>
                         </a>
                     </div>
+                    <div class="sidebar-nav-link-hr"></div>
                     <div class="sidebar-nav-link">
                         <a href="#education">
                             Education
                             <i class="fa fa-graduation-cap"></i>
                         </a>
                     </div>
+                    <div class="sidebar-nav-link-hr"></div>
                     <div class="sidebar-nav-link">
                         <a href="#skill">
                             Skill
                             <i class="fa fa-star"></i>
                         </a>
                     </div>
+                    <div class="sidebar-nav-link-hr"></div>
                     <div class="sidebar-nav-link">
                         <a href="#portofolio">
                             Portofolio
                             <i class="fa fa-cubes"></i>
                         </a>
                     </div>
+                    <div class="sidebar-nav-link-hr"></div>
                     <div class="sidebar-nav-link">
                         <a href="#contact">
                             Contact
                             <i class="fa fa-envelope"></i>
                         </a>
                     </div>
+                    <div class="sidebar-nav-link-hr"></div>
                     <div class="sidebar-nav-link">
                         <a href="#">
                             Download CV
@@ -81,7 +86,7 @@
     
             <div class="content" id="aboutnav">
 
-            <div class="content-block" id="about">
+            <section class="content-block" id="about">
                 <h2>About Me</h2>
                 <div class="border-bottom-title"></div>
                 <img class="profil" src="img/profile.png" alt="profile" draggable="false">
@@ -91,9 +96,9 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum adipisci provident praesentium sapiente quam, obcaecati nam, nisi atque est ipsa ea qui repellendus tempora tenetur! Culpa saepe non sit sint?
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptate pariatur quam. Sequi, natus. Voluptatibus, autem quibusdam earum amet enim vel assumenda necessitatibus dolor dolores maiores porro! Ab, molestias commodi.
                 </p>
-            </div>
+            </section>
             <br>
-            <div class="content-block" id="education">
+            <section class="content-block" id="education">
                 <h2>Education</h2>
                 <div class="border-bottom-title"></div>
                 <p align="justify">
@@ -102,9 +107,9 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum adipisci provident praesentium sapiente quam, obcaecati nam, nisi atque est ipsa ea qui repellendus tempora tenetur! Culpa saepe non sit sint?
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptate pariatur quam. Sequi, natus. Voluptatibus, autem quibusdam earum amet enim vel assumenda necessitatibus dolor dolores maiores porro! Ab, molestias commodi.
                 </p>
-            </div>
+            </section>
             <br>
-            <div class="content-block" id="skill">
+            <section class="content-block" id="skill">
                 <h2>Skill</h2>
                 <div class="border-bottom-title"></div>
                 <p align="justify">
@@ -113,9 +118,9 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum adipisci provident praesentium sapiente quam, obcaecati nam, nisi atque est ipsa ea qui repellendus tempora tenetur! Culpa saepe non sit sint?
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptate pariatur quam. Sequi, natus. Voluptatibus, autem quibusdam earum amet enim vel assumenda necessitatibus dolor dolores maiores porro! Ab, molestias commodi.
                 </p>
-            </div>
+            </section>
             <br>
-            <div class="content-block" id="portofolio">
+            <section class="content-block" id="portofolio">
                 <h2>Portofolio</h2>
                 <div class="border-bottom-title"></div>
                 <p align="justify">
@@ -124,9 +129,9 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum adipisci provident praesentium sapiente quam, obcaecati nam, nisi atque est ipsa ea qui repellendus tempora tenetur! Culpa saepe non sit sint?
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptate pariatur quam. Sequi, natus. Voluptatibus, autem quibusdam earum amet enim vel assumenda necessitatibus dolor dolores maiores porro! Ab, molestias commodi.
                 </p>
-            </div>
+            </section>
             <br>
-            <div class="content-block" id="contact">
+            <section class="content-block" id="contact">
                 <h2>Contact</h2>
                 <div class="border-bottom-title"></div>
                 <p align="justify">
@@ -135,7 +140,7 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum adipisci provident praesentium sapiente quam, obcaecati nam, nisi atque est ipsa ea qui repellendus tempora tenetur! Culpa saepe non sit sint?
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptate pariatur quam. Sequi, natus. Voluptatibus, autem quibusdam earum amet enim vel assumenda necessitatibus dolor dolores maiores porro! Ab, molestias commodi.
                 </p>
-            </div>
+            </section>
             <br>
             <div class="footer">
                 <p>
@@ -154,6 +159,35 @@
         <script>
             document.getElementById('year').textContent = new Date().getFullYear();
         </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const navLinks = document.querySelectorAll(".sidebar-nav-link a");
+                
+                function setActiveLink() {
+                    
+                    // remove active class from all links
+                    navLinks.forEach(link => link.classList.remove("active"));
+                    
+                    // get current URL fragment (after #)
+                    const hash = window.location.hash;
+                    
+                    if (hash) {
+                        const activeLink = document.querySelector(`.sidebar-nav-link a[href="${hash}"]`);
+                        if (activeLink) {
+                            activeLink.classList.add("active");
+                        }
+                    }
+                }
+                
+                // set on page load
+                setActiveLink();
+                
+                // set on hash change (when user clicks a link)
+                window.addEventListener("hashchange", setActiveLink);
+});
+</script>
+
 
     </body>
 </html>
