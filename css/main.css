@@ -3,8 +3,9 @@ html {
 }
 
 .theme-light {
-    --base-body-background: #ffffff;
+    --base-body-background: rgb(224, 224, 224);
     --base-body-color: #282828;
+    --base-container-background-0: rgb(240, 240, 240);
     --base-container-background-1: rgb(142, 229, 225);
     --base-container-background-2: rgb(74, 186, 181);
     --base-container-background-3: rgb(45, 136, 131);
@@ -45,7 +46,7 @@ body {
 
 .container .content {
     flex: 1;
-    background-color: pink;
+    background-color: var(--base-body-background);
     margin-top: 20pt;
     margin-bottom: 20pt;
     margin-left: calc(220pt + 20pt);
@@ -121,7 +122,7 @@ svg {
 }
 
 .content-block {
-    background-color: rgb(207, 144, 17);
+    background-color: var(--base-container-background-0);
     padding: 20pt 20pt;
 }
 
@@ -129,11 +130,48 @@ svg {
     font-weight: bold;
 }
 
+.content-block p {
+    text-align: justify;
+}
+
 .border-bottom-title {
-    background-color: #000000;
+    background-color: var(--base-body-color);
     height: 2.5pt;
     margin-bottom: 20pt;
     width: 50pt;
+}
+
+#about img {
+    display: block;
+    margin: 0 auto;
+    width: 256px;
+    border-radius: 7pt;
+}
+
+.education-block-dot {
+    content: '';
+    width: 10px;
+    height: 10px;
+    margin-left: -19pt;
+    margin-top: 3pt;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #000;
+}
+
+.education-block {
+    padding: 10pt 15pt;
+    border-left: 1px solid var(--base-body-color);
+    border-bottom: 1px solid var(--base-body-color);
+}
+
+#contact table tr td{
+    padding: 3pt 5pt;
+}
+
+#contact a, #contact a:hover, #contact a:visited{
+    text-decoration: none;
+    color: var(--base-body-color);
 }
 
 .footer {
