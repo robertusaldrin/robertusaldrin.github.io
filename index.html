@@ -9,7 +9,7 @@
 
         <!-- CSS Libraries -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
         <!-- Template Stylesheet -->
         <link href="css/main.css" rel="stylesheet">
@@ -79,7 +79,7 @@
                         <input type="checkbox" onchange="toogleTheme()" id="slider">
                         <span class="slider round"></span>
                     </label>
-                    <i class="fa fa-moon moon"></i>
+                    <i class="fa fa-moon moon" aria-hidden="true"></i>
                 </div>
                 </center>
             </div>
@@ -151,32 +151,17 @@
                 <section class="content-block" id="contact">
                     <h2>Contact</h2>
                     <div class="border-bottom-title"></div>
-                    <table>
-                        <tr>
-                            <td class="text-center"><i class="fa fa-user"></i></td>
-                            <td>Robertus Aldrin Pangemanan</td>
-                        </tr>
-                        <tr>
-                            <td class="text-center"><i class="fa fa-map-pin"></i></td>
-                            <td>Duren Sawit, Jakarta Timur, Jakarta</td>
-                        </tr>
-                        <tr>
-                            <td class="text-center"><i class="fa fa-envelope"></i></td>
-                            <td><a href="mailto:robertusaldrin98@gmail.com">robertusaldrin98@gmail.com</a></td>
-                        </tr>
-                        <tr>
-                            <td class="text-center"><i class="fa-brands fa-linkedin"></i></td>
-                            <td><a href="">Robertus Aldrin</a></td>
-                        </tr>
-                        <tr>
-                            <td class="text-center"><i class="fa-brands fa-github"></i></td>
-                            <td><a href="">Robertus Aldrin</a></td>
-                        </tr>
-                        <tr>
-                            <td class="text-center"><i class="fa-brands fa-instagram"></i></td>
-                            <td><a href="">Robertus Aldrin</a></td>
-                        </tr>
-                    </table>
+                    <ul>
+                        <li><i class="fa fa-lg fa-user col-1 text-center"></i> <span class="col-11">Robertus Aldrin Pangemanan</span></li>
+                        <li><i class="fa fa-lg fa-map-pin col-1 text-center"></i> <span class="col-11">Duren Sawit, Jakarta Timur, Jakarta</span></li>
+                        <li><a target="_blank" href="mailto:robertusaldrin98@gmail.com"><i class="fa fa-lg fa-envelope col-1 text-center"></i> <span>robertusaldrin98@gmail.com</span></a></li>
+                    </ul>
+                    <br>
+                    <div class="contact-vertical-icon text-center">
+                        <a href=""><i class="contact-vertical-icon-item fab fa-lg fa-linkedin" aria-hidden="true"></i></a>
+                        <a href=""><i class="contact-vertical-icon-item fab fa-lg fa-github" aria-hidden="true"></i></a>
+                        <a href=""><i class="contact-vertical-icon-item fab fa-lg fa-instagram" aria-hidden="true"></i></a>
+                    </div>
                 </section>
                 <br><br><br><br><br><br><br><br><br><br><br><br>
                 <div class="footer">

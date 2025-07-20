@@ -16,18 +16,21 @@ html {
 }
 
 .theme-dark {
-    --base-body-background: #010101;
-    --base-body-color: #e3e3e3;
-    --base-container-background-1: rgb(33, 19, 49);
-    --base-container-background-2: rgb(51, 33, 72);
-    --base-container-background-3: rgb(77, 40, 120);
+    --base-body-background: #000000;
+    --base-body-color-1: #e7e7e7;
+    --base-body-color-2: #a6a6a6;
+    --base-container-background-sidebar-1: #121212;
+    --base-container-background-sidebar-2: #1f1f1f;
+    --base-container-background-content-1: #1f1f1f;
     --base-sun: rgb(74, 186, 181);
     --base-moon: rgb(51, 33, 72);
+    --base-sidebar-link: #a6a6a6;
+    --base-sidebar-link-active: #c38fff;
 }
 
 body {
     background-color: var(--base-body-background);
-    color: var(--base-body-color);
+    color: var(--base-body-color-1);
     transition: background-color 0.4s, color 0.4s;
     font-family: monospace,'Open Sans', sans-serif;
 }
@@ -38,7 +41,7 @@ body {
 }
 
 .container .sidebar {
-    background-color: var(--base-container-background-2);
+    background-color: var(--base-container-background-sidebar-2);
     height: 100vh;
     position: fixed;
     width: 220pt;
@@ -55,7 +58,7 @@ body {
 }
 
 .sidebar-title {
-    background-color: var(--base-container-background-1);
+    background-color: var(--base-container-background-sidebar-1);
 }
 
 .sidebar-title span {
@@ -85,11 +88,11 @@ svg {
 }
 
 #sidebar-svg rect{
-    fill: var(--base-container-background-2);
+    fill: var(--base-container-background-sidebar-2);
 }
 
 #sidebar-svg path{
-    fill: var(--base-container-background-1);
+    fill: var(--base-container-background-sidebar-1);
 }
 
 .sidebar-nav {
@@ -101,7 +104,7 @@ svg {
 }
 
 .sidebar-nav-link-hr {
-    background-color: var(--base-container-background-1);
+    background-color: var(--base-container-background-sidebar-1);
     height: 1px;
     width: 100%;
     opacity: 0.4;
@@ -121,13 +124,15 @@ svg {
     color: var(--base-sidebar-link-active);
 }
 
-.content-block {
-    background-color: var(--base-container-background-0);
-    padding: 20pt 20pt;
-}
-
 .content-block h2 {
     font-weight: bold;
+    color: var(--base-body-color-1);
+}
+
+.content-block {
+    background-color: var(--base-container-background-content-1);
+    padding: 20pt 20pt;
+    color: var(--base-body-color-2);
 }
 
 .content-block p {
@@ -135,7 +140,7 @@ svg {
 }
 
 .border-bottom-title {
-    background-color: var(--base-body-color);
+    background-color: red;
     height: 2.5pt;
     margin-bottom: 20pt;
     width: 50pt;
@@ -161,17 +166,31 @@ svg {
 
 .education-block {
     padding: 10pt 15pt;
-    border-left: 1px solid var(--base-body-color);
-    border-bottom: 1px solid var(--base-body-color);
+    border-left: 1px solid red;
+    border-bottom: 1px solid red;
 }
 
-#contact table tr td{
-    padding: 3pt 5pt;
+#contact ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#contact ul li {
+    padding: 2.5pt 0;
+}
+
+.contact-vertical-icon-item {
+    color: var(--base-container-background-content-1);
+    background-color: var(--base-body-color-1);
+    height: 24pt;
+    width: 24pt;
+    padding-top: 6pt;
+    border-radius: 3pt;
 }
 
 #contact a, #contact a:hover, #contact a:visited{
     text-decoration: none;
-    color: var(--base-body-color);
+    color: var(--base-body-color-1);
 }
 
 .footer {
