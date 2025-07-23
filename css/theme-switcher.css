@@ -1,19 +1,20 @@
 .theme-switcher {
     position: absolute;
     bottom: 0;
-    width: 90%;
-    padding-bottom: 7pt;
+    width: 100%;
+    padding-bottom: 10pt;
 }
 
 .switch {
-    bottom: -4.2pt;
+    bottom: -2pt;
     position: relative;
     display: inline-block;
     width: 40pt;
     height: 10pt;
     cursor: pointer;
-    background-color: var(--base-container-background-3);
+    background-color: var(--base-body-color-2);
     border-radius: 10pt;
+    opacity: 0.5;
 }
 
 /* hide default checkbox */
@@ -26,7 +27,7 @@
 .slider:before {
     position: absolute;
     content: "";
-    background-color: var(--base-container-background-1);
+    background-color: red;
     height: 5pt; width: 10pt; /* slider size */
     top: 2.5pt; left: 2.5pt; /* slider reset position */
     border-radius: 10pt;
@@ -34,7 +35,7 @@
 }
 
 input:checked + .slider:before {
-    background: var(--base-container-background-1);
+    background: var(--base-body-background);
     transform: translateX(25pt);
 }
 

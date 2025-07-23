@@ -16,16 +16,16 @@ html {
 }
 
 .theme-dark {
-    --base-body-background: #000000;
-    --base-body-color-1: #e7e7e7;
-    --base-body-color-2: #a6a6a6;
-    --base-container-background-sidebar-1: #121212;
-    --base-container-background-sidebar-2: #1f1f1f;
-    --base-container-background-content-1: #1f1f1f;
-    --base-sun: rgb(74, 186, 181);
-    --base-moon: rgb(51, 33, 72);
-    --base-sidebar-link: #a6a6a6;
-    --base-sidebar-link-active: #c38fff;
+    --base-body-background: #0D1117;
+    --base-body-color-1: #8B949E;
+    --base-body-color-2: #586069;
+    --base-container-background-sidebar-1: #0A0F1A;
+    --base-container-background-sidebar-2: #161B22;
+    --base-container-background-content-1: #161B22;
+    --base-sun: #586069;
+    --base-moon: #586069;
+    --base-sidebar-link: #8B949E;
+    --base-sidebar-link-active: #FF4C4C;
 }
 
 body {
@@ -33,6 +33,7 @@ body {
     color: var(--base-body-color-1);
     transition: background-color 0.4s, color 0.4s;
     font-family: monospace,'Open Sans', sans-serif;
+    font-size: small;
 }
 
 .container {
@@ -74,13 +75,12 @@ body {
 
 .sidebar-title-name {
     padding-top: 20pt;
-    font-size: 20pt;
+    font-size: large;
     font-weight: bold;
 }
 
 .sidebar-title-position {
     padding-bottom: 15pt;
-    font-size: large;
 }
 
 svg {
@@ -126,31 +126,34 @@ svg {
 
 .content-block h2 {
     font-weight: bold;
+    font-size: large;
     color: var(--base-body-color-1);
 }
 
 .content-block {
     background-color: var(--base-container-background-content-1);
     padding: 20pt 20pt;
-    color: var(--base-body-color-2);
+    color: var(--base-body-color-1);
 }
 
 .content-block p {
     text-align: justify;
+    font-size: small;
 }
 
 .border-bottom-title {
-    background-color: red;
+    background-color: var(--base-sidebar-link-active);
     height: 2.5pt;
     margin-bottom: 20pt;
     width: 50pt;
 }
 
 #about img {
+    z-index: 0;
     display: block;
     margin: 0 auto;
-    width: 256px;
-    border-radius: 7pt;
+    width: 150px;
+    border-radius: 50%;
 }
 
 .education-block-dot {
@@ -188,9 +191,19 @@ svg {
     border-radius: 3pt;
 }
 
-#contact a, #contact a:hover, #contact a:visited{
+.contact-vertical-icon-item:hover {
+    color: var(--base-sidebar-link-active);
+    background-color: var(--base-container-background-content-1);
+}
+
+#contact a, #contact a:visited{
     text-decoration: none;
     color: var(--base-body-color-1);
+}
+
+#contact a:hover{
+    text-decoration: none;
+    color: var(--base-sidebar-link-active);
 }
 
 .footer {
