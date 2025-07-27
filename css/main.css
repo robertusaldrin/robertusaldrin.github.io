@@ -1,0 +1,207 @@
+.theme-dark {
+    --base-background-1: #080519; /* darker */
+    --base-background-2: #080519; /* lighter */
+    --base-background-3: #1E1B2A; /* more lighter */
+    --base-text-1: #bbbaba; /* darker */
+    --base-text-2: #D4D4D4; /* darker */
+    --base-text-3: #F3F3F3; /* lighter */
+    --base-decoration-red: #9A3131;
+}
+
+body {
+    background-color:var(--base-background-1);
+    color: var(--base-text-2);
+    font-family: 'roboto', sans-serif, 'Open Sans';
+    font-size: 12.5px;
+}
+
+.my-container-inner {
+    background-color: var(--base-background-2);
+}
+
+.my-navbar {
+    position: sticky;
+    top: 0;
+    background-color: var(--base-background-2);
+}
+
+.my-navbar-logo {
+    padding: 14px;
+    margin-top: 10px;
+}
+
+.my-navbar-logo-link {
+    color: var(--base-text-2);
+}
+
+.my-navbar-logo-link:hover {
+    color: var(--base-text-2);
+}
+
+.my-navbar-link {
+    padding: 14px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: var(--base-text-2);
+    font-weight: bolder;
+}
+
+.my-navbar-link:hover {
+    padding: 14px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: var(--base-decoration-red);
+}
+
+.my-navbar-link.active {
+    padding: 14px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: var(--base-decoration-red);
+}
+
+#about, #skills, #work, #portfolio, #education, #contact {
+    padding-top: 60px;
+    background-color: #79d662;
+}
+
+.my-work, .my-portfolio, .my-education, .my-contact {
+    height: 600px;
+}
+
+.my-home {
+    margin-top: 80px;
+}
+
+.my-home-desc-name, .my-home-desc-title, .my-home-desc-intro, .my-home-desc-media {
+    padding: 0 100px 0 50px;
+}
+
+.my-home-desc-name h1 {
+    color: var(--base-text-3);
+    font-weight: bold;
+}
+
+.my-home-desc-title {
+    margin-top: -7px;
+    color: var(--base-text-2);
+}
+
+.my-home-desc-title-line {
+    margin-top: 5px;
+    height: 3px;
+    width: 160px;
+    background-color: var(--base-decoration-red);
+}
+
+.my-home-desc-icon {
+    padding: 0 15px;
+    font-size: 12px;
+}
+
+.my-home-desc-icon ul {
+    list-style-type: none;
+    color: var(--base-text-2);
+}
+
+.my-home-desc-media a {
+    text-decoration: none;
+}
+
+.my-home-desc-media-block {
+    color: var(--base-text-3);
+    background-color: var(--base-background-3);
+    height: 46px;
+    width: 46px;
+    padding-top: 14px;
+    padding-left: 10px;
+    border-radius: 3px;
+    margin-right: 6px;
+}
+
+.my-home-desc-media-block:hover {
+    color: var(--base-decoration-red);
+    background-color: var(--base-background-2);
+    height: 46px;
+    width: 46px;
+    padding-top: 14px;
+    padding-left: 10px;
+    border-radius: 3px;
+    margin-right: 6px;
+}
+
+.my-home-image-profile {
+    width: 220px;
+    height: 320px;
+    background-color: red;
+    box-shadow: 40px 40px 0px rgba(0, 0, 0, 1);
+}
+
+.my-home-image-profile img {
+    width: 100%;
+    height: 100%;
+}
+
+.my-section-title {
+    font-weight: bold;
+    padding: 10px;
+    width: 150px;
+    border-bottom: 3px solid var(--base-decoration-red);
+}
+
+.my-about-content {
+    padding: 20px 0px;
+    width: 700px;
+    text-align: justify;
+}
+
+.my-skills-icon {
+    height: 40px;
+    width: 40px;
+    border-radius: 3px;
+    margin-left: 20px;
+}
+
+.my-skills-icon img {
+    height: 100%;
+}
+
+.my-skills-detail {
+    width: 100%;
+    padding: 0px 14px 0px 7px;
+    margin-top: 6px;
+}
+
+.my-skills-detail span {
+    font-size: 12px;
+    font-family: 'Gill Sans MT';
+}
+
+.my-skills-value {
+    float: right;
+}
+
+.my-skills-bar {
+    position: relative;
+    background-color: var(--base-decoration-red);
+    height: 3px;
+    margin-top: 3px;
+}
+
+.my-skills-bar-dot i{
+    font-size: 7px;
+    position: absolute;
+    margin-left: -6px;
+    margin-top: -4px;
+    padding-top: 0.187px;
+    left: 90%;
+    border: 2px solid var(--base-background-2);
+    border-radius: 50%;
+    background-color: var(--base-background-2);
+    color: var(--base-decoration-red);
+}
+
+.my-work-block {
+    background-color: blue;
+    width: 520px;
+}
