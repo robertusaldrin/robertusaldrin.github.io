@@ -23,6 +23,7 @@ body {
     position: sticky;
     top: 0;
     background-color: var(--base-background-2);
+    z-index: 99;
 }
 
 .my-navbar-logo {
@@ -60,12 +61,12 @@ body {
     color: var(--base-decoration-red);
 }
 
-#about, #skills, #work, #portfolio, #education, #contact {
+#about, #skills, #work, #portfolio, #contact {
     padding-top: 60px;
     background-color: #79d662;
 }
 
-.my-work, .my-portfolio, .my-education, .my-contact {
+.my-portfolio, .my-contact {
     height: 600px;
 }
 
@@ -149,10 +150,50 @@ body {
     border-bottom: 3px solid var(--base-decoration-red);
 }
 
+.my-section-title-education {
+    position: relative;
+    font-weight: bold;
+    padding: 8px 0px;
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.my-section-title-education:after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    background-color: var(--base-decoration-red);
+    width: 20px;
+    left: 0;
+    bottom: 0;
+}
+
 .my-about-content {
     padding: 20px 0px;
-    width: 700px;
+    width: 800px;
     text-align: justify;
+}
+
+.my-about-education p {
+    margin: 2px 0px;
+}
+
+.my-about-education-year {
+    font-size: 11px;
+    font-style: italic;
+    font-family: monospace;
+    color: var(--base-text-1);
+}
+
+.my-about-education-univ {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.my-about-education-thesis {
+    font-size: 11px;
+    font-style: italic;
+    color: var(--base-text-1);
 }
 
 .my-skills-icon {
@@ -202,6 +243,45 @@ body {
 }
 
 .my-work-block {
-    background-color: blue;
+    background-color: var(--base-background-3);
     width: 520px;
+    padding: 10px 30px;
+    font-size: 12px;
+}
+
+.my-work-block p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.my-work-block-position {
+    font-size: 13px;
+}
+
+.my-work-block-year {
+    float: right;
+    font-size: 11px;
+    color: var(--base-text-1);
+    font-style: italic;
+    font-family: monospace;
+}
+
+.my-work-line {
+    margin: 10px 0px;
+    background-color: var(--base-decoration-red);
+    height: 30px;
+    width: 3px;
+    position: relative;
+}
+
+.my-work-line i {
+    margin-top: -1px;
+    margin-left: -4.7px;
+    font-size: 7px;
+    position: absolute;
+    padding-top: 0.187px;
+    border: 3px solid var(--base-background-2);
+    border-radius: 50%;
+    background-color: var(--base-background-2);
+    color: var(--base-decoration-red);
 }
