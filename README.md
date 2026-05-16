@@ -1,6 +1,7 @@
-This portfolio website is built with <b>React</b> and <b>Vite</b>, and compiled into static files for deployment.
+This portfolio website is built with <b>React</b> and <b>Vite</b>.
+<br>The files in this repository are static files only generated from the build process.
 
-How to:
+<br>How to compile a React project into static files, so you can deploy it on GitHub Pages:
 <br>1. Open your Vite + React project
 <br><br>2. Update ```vite.config.js```
 ```
